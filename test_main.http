@@ -1,0 +1,42 @@
+# Test your FastAPI endpoints
+
+GET http://localhost:8000
+Accept: application/json
+
+###
+
+GET http://localhost:8000/hello/taehyeon
+Accept: application/json
+
+###
+
+POST http://localhost:8000/api/v1/embeddings
+Accept: application/json
+Content-Type: application/json
+
+{
+    "text": "안녕"
+}
+
+###
+
+POST http://localhost:8000/api/v1/embeddings/similarities
+Accept: application/json
+Content-Type: application/json
+
+{
+    "first" : "안녕하세요",
+    "second" : "안녕"
+}
+
+###
+
+POST http://localhost:8000/api/v1/completions
+Accept: application/json
+Content-Type: application/json
+
+{
+    "prompt": "안녕"
+}
+
+###
